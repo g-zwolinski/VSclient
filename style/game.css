@@ -1,0 +1,78 @@
+body {
+	overflow: hidden;
+	background-color: #505347;
+}
+
+#gameCanvas {
+	display: none;
+	z-index:-1;
+}
+#viewport {
+	position:relative;
+	top:-450px;
+	right:-12px;
+	background-color: #000;
+	z-index:1;
+}
+#mapa {
+	position:relative;
+	top:-650px;
+	right:-60px;
+	background-color: #505347;
+	height: 200px;
+	z-index:1;
+    
+}
+
+#contener {
+	position:relative;
+	top:-640px;
+	right:-470px;
+	height: 190px;
+	width: 200px;
+	z-index:1;
+}
+
+#border {
+	z-index:0;
+}
+#hpbar {
+position:relative;
+	top:-460px;
+	right:-15px;
+	height: 15px;
+	width: 650px;
+	background-color: #c30;
+	z-index:1;
+}
+#mpbar {
+	position:relative;
+	top:-460px;
+	right:-15px;
+	height: 15px;
+	width: 650px;
+	background-color: #ff3;
+	z-index:1;
+}
+#menu {
+	position:relative;
+	top:-450px;
+	right:-465px;
+	text-shadow:2px 1px #333;
+	height: 15px;
+	width: 200px;
+	z-index:10;
+}
+
+#kontekst{
+height: 500px;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Valiant Slayers</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="http://104.236.72.245:9000/socket.io/socket.io.js"></script>		
+	<link rel="stylesheet" href="style/reset.css">
+	<link rel="stylesheet" href="style/game.css">
+	
+	 <?php   ?>
+</head>
+
+<body>
+<div class="noselect" id="main">
+
+
+
+	<div class="container" id="kontekst">
+
+	<div id="border"><img src="images/border2.png"></img></div>
+		<div id="hpbar"></div>
+		<div id="mpbar"></div>
+		<canvas id="viewport"></canvas>
+		<canvas id="mapa"></canvas>
+		<div id="menu">
+			<table><tr>
+				<td width="70" onclick="stats()">STATS</td>
+				<td width="80" onclick="skills()">SKILLS</td>
+				<td onclick="equip()">EQUIP</td>
+			</tr></table>
+		</div>
+		<div id="contener">
+
+		<div id="stats" style="display: block;">Your statistics:</div>
+		<div id="skills" style="display: none;">Your skills:
+		 <table>
+		<tr><td>
+  <input type="button"  id="s3" value="basic" style="background-color: #333;border: none;width: 90px;"  onclick="wbasic()"><br>
+  </td>
+  <td>
+  <input type="button" id="s1" value="teleport"  style="background-color: #333;border: none;width: 90px;" onclick="wteleport()"><br>
+  </td></tr>
+  <tr><td>
+  <input type="button" id="s2" value="nova" onclick="wnova()"style="background-color: #333;border: none;width: 90px;"><br>
+  </td><td></td></tr>
+  
+  </table>
+  <table>
+  <tr><td>Active on Left Button:</td></tr>
+  <tr><td><div id="activeSkillL"></div></td></tr>
+   <tr><td>Active on Right Button:</td></tr>
+  <tr><td><div id="activeSkillP"></div></td></tr>
+  </table>
+  Using:<div id="spriteToDraw"></div>
+		</div>
+		<div id="equip" style="display: none;">Your equipment:</div>
+
+		</div>
+		<canvas id="gameCanvas"></canvas>
+		
+    </div>
+	
+<div style="height: 230px"><br>
+<object type="text/html" data="chat.php" 
+      width="700" height="220"></object></div>
+	
+	
+
+</div>
+
+	<div id="spriteToDrawRemote"></div>
+<script src="js/requestAnimationFrame.js"></script>
+		<script src="js/Keys.js"></script>
+		<script src="js/Player.js"></script>
+		<script src="js/game.js"></script>
+		<script>
+
+	
+		function stats(){
+				document.getElementById("stats").style.display="block";
+				document.getElementById("equip").style.display="none";
+				document.getElementById("skills").style.display="none";
+
+		}
+		function equip(){
+				document.getElementById("equip").style.display="block";
+				document.getElementById("skills").style.display="none";
+				document.getElementById("stats").style.display="none";
+		}
+		function skills(){
+				document.getElementById("skills").style.display="block";
+				document.getElementById("equip").style.display="none";
+				document.getElementById("stats").style.display="none";
+		}	
+		
+		
+function wnova(){
+  document.getElementById("activeSkillL").innerHTML="nova";
+}
+
+function wteleport(){
+  document.getElementById("activeSkillP").innerHTML="teleport";
+}
+
+function wbasic(){
+ document.getElementById("activeSkillL").innerHTML="basic";
+}
+	
+		
+		
+			init();
+			animate();	
+				
+	
+				
+				
+		</script>
+</body>
+</html>
+
