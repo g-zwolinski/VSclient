@@ -368,6 +368,7 @@ var Player = function(startX, startY, startLvl, startProffesion) {
 	//x2-local x1-remote
 	var drawRemote = function(ctx3,ctx2,x2,x1,y2,y1,playerToAttack,spriteToDrawRemote,attackerLvl,idToGetExp,remoteProffesion,remoteMoveDirection,remoteCounter,rWilkX,rWilkY,rWilkHp,rWilkMoveDirection) {
 		document.getElementById("spriteToDrawRemote").innerHTML=spriteToDrawRemote;
+		remoteProffesion=0;
 		if(localId===playerToAttack){
 			document.getElementById("spriteToDrawRemote").innerHTML=spriteToDrawRemote;
 			switch(spriteToDrawRemote){
