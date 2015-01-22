@@ -373,7 +373,7 @@ var Player = function(startX, startY, startLvl, startProffesion) {
 			document.getElementById("spriteToDrawRemote").innerHTML=spriteToDrawRemote;
 			switch(spriteToDrawRemote){
 				case "":
-					//ctx2.drawImage(sprite, 60, 45, 48, 60, (x1-x2)+176, (y1-y2)+170, 48, 60);
+					ctx2.drawImage(sprite, 60, 45, 48, 60, (x1-x2)+176, (y1-y2)+170, 48, 60);
 					drawSprite(remoteProffesion,remoteMoveDirection,remoteCounter,(x1-x2),(y1-y2));
 					document.getElementById("spriteToDrawRemote").innerHTML=""
 				break;
