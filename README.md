@@ -1,3 +1,3 @@
 # VSclient
 
-# pamietajcie o komentarzach w commitach!
+client for my old websocket mmorpg game. Chaos.
